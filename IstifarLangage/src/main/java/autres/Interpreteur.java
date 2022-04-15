@@ -63,5 +63,20 @@ public class Interpreteur {
     public HashMap<String, Variable> getVariables() {
         return variables;
     }
-    
+
+    /**
+     * Méthode qui retourne le Noeud root de l'interpreteur
+     * @return Noeud root de l'interpreteur
+     */
+    public Noeud getRoot(){
+        return this.root;
+    }
+
+    /**
+     * Méthode qui permet l'éxécution du programme lorsque tout les noeuds ont été chargés.
+     */
+    public void executerInterpreteur(){
+        this.root.executer();
+    }
+
 }

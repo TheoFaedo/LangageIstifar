@@ -52,7 +52,7 @@
       <recent name="variables" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Interpreteur">
+  <component name="RunManager" selected="JUnit.BooleenTest">
     <configuration name="Interpreteur" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="autres.Interpreteur" />
       <module name="IstifarLangage" />
@@ -62,6 +62,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BooleenTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IstifarLangage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="variables.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="variables" />
+      <option name="MAIN_CLASS_NAME" value="variables.BooleenTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -111,28 +126,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EntierTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IstifarLangage" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="variables.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="variables" />
-      <option name="MAIN_CLASS_NAME" value="variables.EntierTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BooleenTest" />
         <item itemvalue="Application.Interpreteur" />
         <item itemvalue="JUnit.ChaineTest" />
         <item itemvalue="JUnit.CaractereTest" />
         <item itemvalue="JUnit.DecimaleTest" />
-        <item itemvalue="JUnit.EntierTest" />
       </list>
     </recent_temporary>
   </component>

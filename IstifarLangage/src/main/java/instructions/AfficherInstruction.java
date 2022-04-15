@@ -1,9 +1,9 @@
 package instructions;
 
-import noeuds.Instruction;
+import noeuds.Noeud;
 import variables.Chaine;
 
-public class AfficherInstruction extends Instruction {
+public class AfficherInstruction implements Noeud {
 
     private Chaine c;
 

@@ -22,7 +22,13 @@ public class Bloc implements Noeud {
     public List<Noeud> getFils() {
         return this.fils;
     }
-    
+
+    @Override
+    public void executer() {
+        for(Noeud n : fils){
+            n.executer();
+        }
+    }
 }
     
 

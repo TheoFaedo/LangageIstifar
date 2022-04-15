@@ -13,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -46,13 +46,14 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="autres" />
       <recent name="variables" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="variables" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BooleenTest">
+  <component name="RunManager" selected="JUnit.InterpreteurTest">
     <configuration name="Interpreteur" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="autres.Interpreteur" />
       <module name="IstifarLangage" />
@@ -81,21 +82,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CaractereTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IstifarLangage" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="variables.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="variables" />
-      <option name="MAIN_CLASS_NAME" value="variables.CaractereTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ChaineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IstifarLangage" />
       <extension name="coverage">
@@ -111,28 +97,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DecimaleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InterpreteurTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IstifarLangage" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="variables.*" />
+          <option name="PATTERN" value="autres.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="variables" />
-      <option name="MAIN_CLASS_NAME" value="variables.DecimaleTest" />
+      <option name="PACKAGE_NAME" value="autres" />
+      <option name="MAIN_CLASS_NAME" value="autres.InterpreteurTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InterpreteurTest.ajouterVariable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IstifarLangage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="autres.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="autres" />
+      <option name="MAIN_CLASS_NAME" value="autres.InterpreteurTest" />
+      <option name="METHOD_NAME" value="ajouterVariable" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.InterpreteurTest" />
+        <item itemvalue="JUnit.InterpreteurTest.ajouterVariable" />
         <item itemvalue="JUnit.BooleenTest" />
         <item itemvalue="Application.Interpreteur" />
         <item itemvalue="JUnit.ChaineTest" />
-        <item itemvalue="JUnit.CaractereTest" />
-        <item itemvalue="JUnit.DecimaleTest" />
       </list>
     </recent_temporary>
   </component>
@@ -154,6 +156,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/variables/ChaineTest.java</url>
           <line>16</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/autres/InterpreteurTest.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

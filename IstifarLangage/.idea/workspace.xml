@@ -53,9 +53,9 @@
       <recent name="variables" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Lecteur">
-    <configuration name="Interpreteur" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="autres.Interpreteur" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Lecteur" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="autres.Lecteur" />
       <module name="IstifarLangage" />
       <extension name="coverage">
         <pattern>
@@ -67,8 +67,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Lecteur" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="autres.Lecteur" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="autres.Main" />
       <module name="IstifarLangage" />
       <extension name="coverage">
         <pattern>
@@ -128,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Lecteur" />
         <item itemvalue="JUnit.InterpreteurTest" />
         <item itemvalue="JUnit.InterpreteurTest.ajouterVariable" />
         <item itemvalue="JUnit.BooleenTest" />
-        <item itemvalue="Application.Interpreteur" />
       </list>
     </recent_temporary>
   </component>

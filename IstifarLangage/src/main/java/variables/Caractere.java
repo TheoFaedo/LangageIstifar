@@ -8,7 +8,8 @@ public class Caractere extends Variable{
      * Constructeur qui prend en parametre le nom de la variable et sa valeur
      * @param nom : nom de la variable
      * @param valeur : caractere étant la valeur de la variable
-     */public Caractere(String nom, char valeur) {
+     */
+    public Caractere(String nom, char valeur) {
         super(nom, "caractere");
         this.valeur = valeur;
     }

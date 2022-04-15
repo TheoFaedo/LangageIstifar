@@ -1,0 +1,6 @@
+def main
+    afficher("haha")
+    if(true)
+        afficher("okay")
+    end
+end

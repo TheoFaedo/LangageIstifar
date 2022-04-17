@@ -1,5 +1,7 @@
 package noeuds;
 
+import exceptions.OperationInvalideException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,7 +46,7 @@ public class Bloc implements Noeud {
      * Méthode qui éxécute les instructions de tout les noeuds fils dans l'ordre
      */
     @Override
-    public void executer() {
+    public void executer() throws OperationInvalideException {
         for(Noeud n : fils){
             n.executer();
         }

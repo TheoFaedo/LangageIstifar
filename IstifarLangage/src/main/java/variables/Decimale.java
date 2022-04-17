@@ -1,5 +1,8 @@
 package variables;
 
+import exceptions.OperationInvalideException;
+import exceptions.TypeValeurInvalideException;
+
 public class Decimale extends Variable{
 
     double valeur; //Valeur de la Variable
@@ -14,11 +17,16 @@ public class Decimale extends Variable{
         this.valeur = valeur;
     }
 
+    public Decimale(){
+        super("default", "entier");
+        this.valeur = 0.0;
+    }
+
     /**
      * Methode permettant de récupérer la valeur de la variable
      * @return la valeur de la variable (decimale)
      */
-    public double getValeur() {
+    public double getValeur() throws OperationInvalideException {
         return valeur;
     }
 

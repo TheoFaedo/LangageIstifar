@@ -1,5 +1,8 @@
 package variables;
 
+import exceptions.OperationInvalideException;
+import exceptions.TypeValeurInvalideException;
+
 public class Booleen extends Variable{
 
     boolean valeur; //Valeur de la Variable
@@ -14,11 +17,16 @@ public class Booleen extends Variable{
         this.valeur = valeur;
     }
 
+    public Booleen(){
+        super("default", "entier");
+        this.valeur = false;
+    }
+
     /**
      * Methode permettant de récupérer la valeur de la variable
      * @return la valeur de la variable (booleen)
      */
-    public boolean getValeur() {
+    public boolean getValeur() throws OperationInvalideException {
         return valeur;
     }
 

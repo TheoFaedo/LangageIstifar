@@ -1,5 +1,6 @@
 package autres;
 
+import exceptions.OperationInvalideException;
 import instructions.AfficherInstruction;
 import noeuds.Bloc;
 
@@ -13,24 +14,6 @@ public class Interpreteur {
 
     private HashMap<String,Variable> variables;
     private Noeud root;
-
-    public static void main(String[] args) {
-
-        //On créer les différents noeuds
-
-        Bloc root = new Bloc(); //Bloc contenant tout le programme
-
-        Bloc main = new Bloc();
-        AfficherInstruction afficher = new AfficherInstruction(new Chaine("nom", "hello world"));
-
-        //On lie les noeuds
-        main.ajouter(afficher);
-        root.ajouter(main);
-
-        //On lance l'éxécution du programme
-        root.executer();
-
-    }
 
     /**
      * Constructeur de l'interpreteur
@@ -76,7 +59,14 @@ public class Interpreteur {
      * Méthode qui permet l'éxécution du programme lorsque tout les noeuds ont été chargés.
      */
     public void executerInterpreteur(){
-        this.root.executer();
+        try{
+            this.root.executer();
+        }catch(OperationInvalideException e){
+            e.printStackTrace();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 
 }

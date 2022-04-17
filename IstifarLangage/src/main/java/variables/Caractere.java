@@ -1,5 +1,8 @@
 package variables;
 
+import exceptions.OperationInvalideException;
+import exceptions.TypeValeurInvalideException;
+
 public class Caractere extends Variable{
 
     char valeur; //Valeur de la Variable
@@ -14,11 +17,16 @@ public class Caractere extends Variable{
         this.valeur = valeur;
     }
 
+    public Caractere(){
+        super("default", "entier");
+        this.valeur = 'c';
+    }
+
     /**
      * Methode permettant de récupérer la valeur de la variable
      * @return la valeur de la variable (caractere)
      */
-    public char getValeur() {
+    public char getValeur() throws OperationInvalideException {
         return valeur;
     }
 

@@ -1,5 +1,6 @@
 package instructions;
 
+import exceptions.OperationInvalideException;
 import noeuds.Noeud;
 import variables.Chaine;
 
@@ -19,7 +20,7 @@ public class AfficherInstruction implements Noeud {
      * Afficher la chaine donnée en paramètre
      */
     @Override
-    public void executer() {
+    public void executer() throws OperationInvalideException {
         System.out.println(c.getValeur());
     }
 }

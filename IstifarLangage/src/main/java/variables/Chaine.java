@@ -1,5 +1,8 @@
 package variables;
 
+import exceptions.OperationInvalideException;
+import exceptions.TypeValeurInvalideException;
+
 public class Chaine extends Variable{
 
     String valeur; //Valeur de la Variable
@@ -8,9 +11,15 @@ public class Chaine extends Variable{
      * Constructeur qui prend en parametre le nom de la variable et sa valeur
      * @param nom : nom de la variable
      * @param valeur : chaine étant la valeur de la variable
-     */public Chaine(String nom, String valeur) {
+     */
+    public Chaine(String nom, String valeur) {
         super(nom, "chaine");
         this.valeur = valeur;
+    }
+
+    public Chaine(){
+        super("default", "entier");
+        this.valeur = null;
     }
 
 
@@ -18,7 +27,7 @@ public class Chaine extends Variable{
      * Methode permettant de récupérer la valeur de la variable
      * @return la valeur de la variable (chaine)
      */
-    public String getValeur() {
+    public String getValeur() throws OperationInvalideException {
         return valeur;
     }
 

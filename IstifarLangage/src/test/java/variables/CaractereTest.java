@@ -1,5 +1,6 @@
 package variables;
 
+import exceptions.OperationInvalideException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -9,7 +10,7 @@ class CaractereTest {
     @ParameterizedTest
     @DisplayName("Test Caractere: méthode getValeur()")
     @ValueSource(chars = {'a','b','c','d','e','f','.',';','\n'})
-    void getValeur(char val) {
+    void getValeur(char val) throws OperationInvalideException{
         Caractere e = new Caractere("a", val);
         Assertions.assertEquals(val, e.getValeur());
     }
@@ -32,7 +33,7 @@ class CaractereTest {
     @ParameterizedTest
     @DisplayName("Test Caractere: méthode setValeur()")
     @ValueSource(chars = {'a','b','c','d','e','f','.',';','\n'})
-    void setValeur(char val) {
+    void setValeur(char val) throws OperationInvalideException {
         Caractere e = new Caractere("a", 't');
         e.setValeur(val);
         Assertions.assertEquals(val, e.getValeur());

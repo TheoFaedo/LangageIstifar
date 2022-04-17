@@ -1,5 +1,6 @@
 package variables;
 
+import exceptions.OperationInvalideException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -9,7 +10,7 @@ class BooleenTest {
     @ParameterizedTest
     @DisplayName("Test Booleen: méthode getValeur()")
     @ValueSource(booleans = {true,false})
-    void getValeur(boolean val) {
+    void getValeur(boolean val) throws OperationInvalideException {
         Booleen e = new Booleen("a", val);
         Assertions.assertEquals(val, e.getValeur());
     }
@@ -32,7 +33,7 @@ class BooleenTest {
     @ParameterizedTest
     @DisplayName("Test Booleen: méthode setValeur()")
     @ValueSource(booleans = {true,false})
-    void setValeur(boolean val) {
+    void setValeur(boolean val) throws OperationInvalideException{
         Booleen e = new Booleen("a", false);
         e.setValeur(val);
         Assertions.assertEquals(val, e.getValeur());

@@ -1,5 +1,6 @@
 package variables;
 
+import exceptions.OperationInvalideException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -9,7 +10,7 @@ class EntierTest {
     @ParameterizedTest
     @DisplayName("Test Entier: méthode getValeur()")
     @ValueSource(ints = {1,2,5,10,100,1000,3333,5690,-800})
-    void getValeur(int val) {
+    void getValeur(int val) throws OperationInvalideException {
         Entier e = new Entier("a", val);
         Assertions.assertEquals(val, e.getValeur());
     }
@@ -32,7 +33,7 @@ class EntierTest {
     @ParameterizedTest
     @DisplayName("Test Entier: méthode setValeur()")
     @ValueSource(ints = {1,2,5,10,100,1000,3333,5690,-800})
-    void setValeur(int val) {
+    void setValeur(int val) throws OperationInvalideException{
         Entier e = new Entier("a", -5);
         e.setValeur(val);
         Assertions.assertEquals(val, e.getValeur());

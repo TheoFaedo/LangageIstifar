@@ -1,5 +1,6 @@
 package variables;
 
+import exceptions.OperationInvalideException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -9,7 +10,7 @@ class DecimaleTest {
     @ParameterizedTest
     @DisplayName("Test Decimale: méthode getValeur()")
     @ValueSource(doubles = {0.5,0.5e5,50.0,10.5,111.54,4.52E10,0.54,-1.1e10,-8.54})
-    void getValeur(double val) {
+    void getValeur(double val) throws OperationInvalideException{
         Decimale e = new Decimale("a", val);
         Assertions.assertEquals(val, e.getValeur());
     }
@@ -32,7 +33,7 @@ class DecimaleTest {
     @ParameterizedTest
     @DisplayName("Test Decimale: méthode setValeur()")
     @ValueSource(doubles = {0.5,0.5e5,50.0,10.5,111.54,4.52E10,0.54,-1.1e10,-8.54})
-    void setValeur(double val) {
+    void setValeur(double val) throws OperationInvalideException {
         Decimale e = new Decimale("a", -5);
         e.setValeur(val);
         Assertions.assertEquals(val, e.getValeur());

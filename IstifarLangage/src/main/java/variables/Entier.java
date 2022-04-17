@@ -1,5 +1,8 @@
 package variables;
 
+import exceptions.OperationInvalideException;
+import exceptions.TypeValeurInvalideException;
+
 public class Entier extends Variable{
 
     int valeur; //Valeur de la Variable
@@ -14,11 +17,16 @@ public class Entier extends Variable{
         this.valeur = valeur;
     }
 
+    public Entier(){
+        super("default", "entier");
+        this.valeur = 0;
+    }
+
     /**
      * Methode permettant de récupérer la valeur de la variable
      * @return la valeur de la variable (entier)
      */
-    public int getValeur() {
+    public int getValeur() throws OperationInvalideException {
         return valeur;
     }
 

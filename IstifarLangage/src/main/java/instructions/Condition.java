@@ -1,5 +1,6 @@
 package instructions;
 
+import exceptions.OperationInvalideException;
 import noeuds.Bloc;
 import noeuds.Noeud;
 import variables.Booleen;
@@ -41,7 +42,7 @@ public class Condition implements Noeud {
      * Execute le bloc siNon si la condition de l'instructio nest fausse et que ce bloc existe
      */
     @Override
-    public void executer() {
+    public void executer() throws OperationInvalideException {
         if(this.condition.getValeur()){
             siOui.executer();
         }else{

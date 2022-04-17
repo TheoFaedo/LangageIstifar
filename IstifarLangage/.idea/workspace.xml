@@ -13,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -30,97 +30,106 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="variables.operations" />
       <recent name="autres" />
       <recent name="variables" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="exceptions" />
       <recent name="variables" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Lecteur" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="autres.Lecteur" />
+  <component name="RunManager" selected="JUnit.OperationBooleenneTest.testGetValeurMauvaisesOperations">
+    <configuration name="OperationBooleenneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IstifarLangage" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="autres.*" />
+          <option name="PATTERN" value="variables.operations.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="autres.Main" />
-      <module name="IstifarLangage" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="autres.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BooleenTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IstifarLangage" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="variables.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="variables" />
-      <option name="MAIN_CLASS_NAME" value="variables.BooleenTest" />
+      <option name="PACKAGE_NAME" value="variables.operations" />
+      <option name="MAIN_CLASS_NAME" value="variables.operations.OperationBooleenneTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InterpreteurTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OperationBooleenneTest.getValeurEt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IstifarLangage" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="autres.*" />
+          <option name="PATTERN" value="variables.operations.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="autres" />
-      <option name="MAIN_CLASS_NAME" value="autres.InterpreteurTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="variables.operations" />
+      <option name="MAIN_CLASS_NAME" value="variables.operations.OperationBooleenneTest" />
+      <option name="METHOD_NAME" value="getValeurEt(variables.Booleen,variables.Booleen,char)" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InterpreteurTest.ajouterVariable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OperationBooleenneTest.getValeurNon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IstifarLangage" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="autres.*" />
+          <option name="PATTERN" value="variables.operations.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="autres" />
-      <option name="MAIN_CLASS_NAME" value="autres.InterpreteurTest" />
-      <option name="METHOD_NAME" value="ajouterVariable" />
+      <option name="PACKAGE_NAME" value="variables.operations" />
+      <option name="MAIN_CLASS_NAME" value="variables.operations.OperationBooleenneTest" />
+      <option name="METHOD_NAME" value="getValeurNon(variables.Booleen)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OperationBooleenneTest.getValeurOu" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IstifarLangage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="variables.operations.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="variables.operations" />
+      <option name="MAIN_CLASS_NAME" value="variables.operations.OperationBooleenneTest" />
+      <option name="METHOD_NAME" value="getValeurOu(variables.Booleen,variables.Booleen,char)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OperationBooleenneTest.testGetValeurMauvaisesOperations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IstifarLangage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="variables.operations.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="variables.operations" />
+      <option name="MAIN_CLASS_NAME" value="variables.operations.OperationBooleenneTest" />
+      <option name="METHOD_NAME" value="testGetValeurMauvaisesOperations(variables.Booleen,variables.Booleen,char)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,11 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Lecteur" />
-        <item itemvalue="JUnit.InterpreteurTest" />
-        <item itemvalue="JUnit.InterpreteurTest.ajouterVariable" />
-        <item itemvalue="JUnit.BooleenTest" />
+        <item itemvalue="JUnit.OperationBooleenneTest.testGetValeurMauvaisesOperations" />
+        <item itemvalue="JUnit.OperationBooleenneTest" />
+        <item itemvalue="JUnit.OperationBooleenneTest.getValeurNon" />
+        <item itemvalue="JUnit.OperationBooleenneTest.getValeurOu" />
+        <item itemvalue="JUnit.OperationBooleenneTest.getValeurEt" />
       </list>
     </recent_temporary>
   </component>
@@ -152,13 +161,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/variables/ChaineTest.java</url>
-          <line>16</line>
+          <line>17</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/autres/InterpreteurTest.java</url>
           <line>12</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/autres/Lecteur.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

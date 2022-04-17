@@ -1,8 +1,10 @@
 package autres;
 
 import instructions.AfficherInstruction;
+import instructions.Condition;
 import noeuds.Bloc;
 import noeuds.Noeud;
+import variables.Booleen;
 import variables.Chaine;
 
 import java.io.File;
@@ -41,24 +43,28 @@ public class Lecteur {
             Scanner scan = new Scanner(new File(this.nomFichier));
             while(scan.hasNextLine()){
                 String ligne = scan.nextLine();
-                Noeud temp;
+                Noeud temp1;
+                Noeud temp2;
+                Matcher m;
 
                 switch (lireLigne(ligne)){
                     case "if":
+                        m = Pattern.compile("\\((.*)\\)").matcher(ligne); //On récupère le contenu de la paranthese
+
                     case "def":
-                        temp = new Bloc(); //On créé un nouveau bloc
+                        temp1 = new Bloc(); //On créé un nouveau bloc
 
-                        ((Bloc)pileNoeud.peek()).ajouter(temp); //On ajoute le nouveau noeud au noeud courant
+                        ((Bloc)pileNoeud.peek()).ajouter(temp1); //On ajoute le nouveau noeud au noeud courant
 
-                        pileNoeud.add(temp); //On ajoute ce bloc à la liste des bloc courant
+                        pileNoeud.add(temp1); //On ajoute ce bloc à la liste des bloc courant
                         break;
 
                     case "afficher":
-                        Matcher m = Pattern.compile("\\((.*)\\)").matcher(ligne); //On récupère ce qu'il y a entre la paranthèse
+                        m = Pattern.compile("\\(\"(.*)\"\\)").matcher(ligne); //On récupère ce qu'il y a entre la paranthèse
 
                         if(m.find()){
-                            temp = new AfficherInstruction(new Chaine("default", m.group(1)));
-                            ((Bloc)pileNoeud.peek()).ajouter(temp); //On ajoute le nouveau noeud au noeud courant
+                            temp1 = new AfficherInstruction(new Chaine("default", m.group(1)));
+                            ((Bloc)pileNoeud.peek()).ajouter(temp1); //On ajoute le nouveau noeud au noeud courant
                         }
                         break;
 

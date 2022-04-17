@@ -55,7 +55,20 @@
       <recent name="variables" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.OperationBooleenneTest.testGetValeurMauvaisesOperations">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="autres.Main" />
+      <module name="IstifarLangage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="autres.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OperationBooleenneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IstifarLangage" />
       <extension name="coverage">
@@ -67,22 +80,6 @@
       <option name="PACKAGE_NAME" value="variables.operations" />
       <option name="MAIN_CLASS_NAME" value="variables.operations.OperationBooleenneTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OperationBooleenneTest.getValeurEt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IstifarLangage" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="variables.operations.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="variables.operations" />
-      <option name="MAIN_CLASS_NAME" value="variables.operations.OperationBooleenneTest" />
-      <option name="METHOD_NAME" value="getValeurEt(variables.Booleen,variables.Booleen,char)" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -137,11 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.OperationBooleenneTest.testGetValeurMauvaisesOperations" />
         <item itemvalue="JUnit.OperationBooleenneTest" />
         <item itemvalue="JUnit.OperationBooleenneTest.getValeurNon" />
         <item itemvalue="JUnit.OperationBooleenneTest.getValeurOu" />
-        <item itemvalue="JUnit.OperationBooleenneTest.getValeurEt" />
       </list>
     </recent_temporary>
   </component>
@@ -168,11 +165,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/autres/InterpreteurTest.java</url>
           <line>12</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/autres/Lecteur.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

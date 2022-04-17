@@ -48,7 +48,7 @@ public class Lecteur {
                 Matcher m;
 
                 switch (lireLigne(ligne)){
-                    case "if":
+                    case "si":
                         m = Pattern.compile("\\((.*)\\)").matcher(ligne); //On récupère le contenu de la paranthese
 
                     case "def":
@@ -68,7 +68,7 @@ public class Lecteur {
                         }
                         break;
 
-                    case "end":
+                    case "fin":
                         pileNoeud.pop();
                         break;
                     default:

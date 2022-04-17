@@ -1,8 +1,6 @@
 package variables.operations;
 
-import com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException;
 import exceptions.OperationInvalideException;
-import exceptions.TypeValeurInvalideException;
 import variables.Entier;
 
 public class OperationEntier extends Entier {

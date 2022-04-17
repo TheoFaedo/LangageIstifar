@@ -1,14 +1,12 @@
 package variables.operations;
 
 import exceptions.OperationInvalideException;
-import javafx.beans.binding.BooleanExpression;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import variables.Booleen;
-import variables.Entier;
 
 import java.util.stream.Stream;
 

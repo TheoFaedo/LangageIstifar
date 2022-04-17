@@ -2,7 +2,6 @@ package variables.operations;
 
 import exceptions.OperationInvalideException;
 import variables.Booleen;
-import variables.Entier;
 
 public class OperationBooleenne extends Booleen{
 

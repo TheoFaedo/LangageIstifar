@@ -1,6 +1,6 @@
 def main
     afficher(1)
-    si(True)
+    si(False)
         afficher("okay")
-    fin
+    finsi
 fin

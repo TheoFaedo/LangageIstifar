@@ -43,13 +43,29 @@ public class Lecteur {
             Scanner scan = new Scanner(new File(this.nomFichier));
             while(scan.hasNextLine()){
                 String ligne = scan.nextLine();
+
                 Noeud temp1 = null;
                 Noeud temp2 = null;
+
+                Variable vTemp = null;
+
                 Matcher m;
 
-                switch (lireLigne(ligne)){
+                switch (trouverInstruction(ligne)){
                     case "si":
                         m = Pattern.compile("\\((.*)\\)").matcher(ligne); //On récupère le contenu de la paranthese
+                        if(m.find()) {
+                            vTemp = lireValeur(m.group(1));
+                            if (vTemp.getType().equals("booleen")) {
+                                temp2 = new Bloc();
+                                temp1 = new Condition((Booleen) vTemp, (Bloc) temp2);
+
+                                ((Bloc)pileNoeud.peek()).ajouter(temp1); //On ajoute le nouveau noeud au noeud courant
+                                pileNoeud.add(temp1); //On ajoute ce bloc à la liste des bloc courant
+                                pileNoeud.add(temp2); //On ajoute ce bloc à la liste des bloc courant
+                            }
+                        }
+                        break;
 
                     case "def":
                         temp1 = new Bloc(); //On créé un nouveau bloc
@@ -72,6 +88,11 @@ public class Lecteur {
                     case "fin":
                         pileNoeud.pop();
                         break;
+
+                    case "finsi":
+                        pileNoeud.pop();
+                        pileNoeud.pop();
+                        break;
                     default:
                         break;
                 }
@@ -85,32 +106,38 @@ public class Lecteur {
 
     }
 
-    public String lireLigne(String ligne){
+    public String trouverInstruction(String ligne){
          String[] tab = ligne.replace('\t', ' ').split(" ");
 
-        Pattern defPattern = Pattern.compile("[ \t]*def[ \t]+[a-z[A-Z]]+[ \t]*");
-        Pattern affPattern = Pattern.compile("[ \t]*afficher(.)[ \t]*");
-        Pattern ifPattern = Pattern.compile("[ \t]*if(.)[ \t]*");
-        Pattern endPattern = Pattern.compile("[ \t]*end[ \t]*");
 
-        Matcher m = defPattern.matcher(ligne);
+        Pattern pattern = Pattern.compile("[ \t]*def[ \t]+[a-z[A-Z]]+[ \t]*");
+        Matcher m = pattern.matcher(ligne);
         if(m.find()){
             return "bloc";
         }
 
-        m = affPattern.matcher(ligne);
+        pattern = Pattern.compile("[ \t]*afficher(.)[ \t]*");
+        m = pattern.matcher(ligne);
         if(m.find()){
             return "afficher";
         }
 
-        m = endPattern.matcher(ligne);
+        pattern = Pattern.compile("[ \t]*si(.)[ \t]*");
+        m = pattern.matcher(ligne);
         if(m.find()){
-            return "end";
+            return "si";
         }
 
-        m = ifPattern.matcher(ligne);
+        pattern = Pattern.compile("[ \t]*fin[ \t]*");
+        m = pattern.matcher(ligne);
         if(m.find()){
-            return "if";
+            return "fin";
+        }
+
+        pattern = Pattern.compile("[ \t]*finsi[ \t]*");
+        m = pattern.matcher(ligne);
+        if(m.find()){
+            return "finsi";
         }
 
         return "o";
@@ -166,9 +193,6 @@ public class Lecteur {
         if(m.find()){
            return new Entier("default", Integer.parseInt(m.group(1)));
         }
-
-
-
 
 
         return new Variable("entier", "entier");

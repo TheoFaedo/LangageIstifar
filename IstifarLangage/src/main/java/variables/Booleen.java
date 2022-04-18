@@ -18,7 +18,7 @@ public class Booleen extends Variable{
     }
 
     public Booleen(){
-        super("default", "entier");
+        super("default", "booleen");
         this.valeur = false;
     }
 

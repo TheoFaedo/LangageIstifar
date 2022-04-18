@@ -8,6 +8,13 @@ import java.util.List;
 public class Bloc implements Noeud {
 
     private List<Noeud> fils; //Liste des noeuds fils du noeud
+
+    /**
+     * Constructeur d'un bloc sans fils
+     */
+    public Bloc() {
+        this.fils = new ArrayList<Noeud>();
+    }
     
    
     /**
@@ -18,12 +25,7 @@ public class Bloc implements Noeud {
         this.fils = fils;
     }
 
-    /**
-     * Constructeur d'un bloc sans fils
-     */
-    public Bloc() {
-        this.fils = new ArrayList<Noeud>();
-    }
+
 
     /**
      * Méthode permettant d'ajouter un noeud fils au noeud

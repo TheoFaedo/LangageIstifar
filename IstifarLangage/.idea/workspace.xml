@@ -55,7 +55,20 @@
       <recent name="variables" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BooleenTest">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="autres.Main" />
+      <module name="IstifarLangage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="autres.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BooleenTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IstifarLangage" />
       <extension name="coverage">
@@ -116,28 +129,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EntierTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IstifarLangage" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="variables.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="variables" />
-      <option name="MAIN_CLASS_NAME" value="variables.EntierTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.BooleenTest" />
         <item itemvalue="JUnit.CaractereTest" />
         <item itemvalue="JUnit.ChaineTest" />
         <item itemvalue="JUnit.DecimaleTest" />
-        <item itemvalue="JUnit.EntierTest" />
       </list>
     </recent_temporary>
   </component>
@@ -155,11 +153,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/variables/ChaineTest.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/autres/InterpreteurTest.java</url>
           <line>12</line>

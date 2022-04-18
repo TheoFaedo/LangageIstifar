@@ -4,8 +4,8 @@ import instructions.AfficherInstruction;
 import instructions.Condition;
 import noeuds.Bloc;
 import noeuds.Noeud;
-import variables.Booleen;
-import variables.Chaine;
+import variables.*;
+import variables.operations.OperationEntier;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -25,7 +25,7 @@ public class Lecteur {
 
     public static void main(String[] args) {
         Lecteur l = new Lecteur("example.istifar");
-        l.lireFichier(new Bloc());
+        System.out.println(l.lireValeur("22+23"));
     }
 
 
@@ -43,8 +43,8 @@ public class Lecteur {
             Scanner scan = new Scanner(new File(this.nomFichier));
             while(scan.hasNextLine()){
                 String ligne = scan.nextLine();
-                Noeud temp1;
-                Noeud temp2;
+                Noeud temp1 = null;
+                Noeud temp2 = null;
                 Matcher m;
 
                 switch (lireLigne(ligne)){
@@ -60,10 +60,11 @@ public class Lecteur {
                         break;
 
                     case "afficher":
-                        m = Pattern.compile("\\(\"(.*)\"\\)").matcher(ligne); //On récupère ce qu'il y a entre la paranthèse
+                        m = Pattern.compile("\\((.*)\\)").matcher(ligne); //On récupère ce qu'il y a entre la paranthèse
 
                         if(m.find()){
-                            temp1 = new AfficherInstruction(new Chaine("default", m.group(1)));
+                            Variable v = lireValeur(m.group(1));
+                            temp1 = new AfficherInstruction(lireValeur(m.group(1)));
                             ((Bloc)pileNoeud.peek()).ajouter(temp1); //On ajoute le nouveau noeud au noeud courant
                         }
                         break;
@@ -113,6 +114,64 @@ public class Lecteur {
         }
 
         return "o";
+    }
+
+    public Variable lireValeur(String chaineALire){
+        Matcher m;
+
+
+        //Syntaxe Addition
+        m = Pattern.compile("(.*)\\+(.*)").matcher(chaineALire);
+        if(m.find()){
+
+            Entier e1 = null;
+            Entier e2 = null;
+
+            Variable vTemp = lireValeur(m.group(1));
+            if(vTemp.getType().equals("entier")){
+                e1 = (Entier)vTemp;
+            }
+
+            vTemp = lireValeur(m.group(2));
+            if(vTemp.getType().equals("entier")){
+                e2 = (Entier)vTemp;
+            }
+
+            return new OperationEntier("default", e1, e2, '+');
+        }
+
+        //Syntaxe chaine de caractere
+        m = Pattern.compile("\"(.*)\"").matcher(chaineALire);
+        if(m.find()){
+            return new Chaine("default", m.group(1));
+        }
+
+        //Syntaxe caractere
+        m = Pattern.compile("\'(.)\'").matcher(chaineALire);
+        if(m.find()){
+            return new Caractere("default", m.group(1).charAt(0));
+        }
+
+        //Syntaxe booleen
+        m = Pattern.compile("(False|True)").matcher(chaineALire);
+        if(m.find()){
+            if(m.group(1).equals("True")){
+                return new Booleen("default", true);
+            }else if(m.group(1).equals("False"))
+                return new Booleen("default", false);
+        }
+
+        //Syntaxe entier
+        m = Pattern.compile("([-]?[0-9]+)").matcher(chaineALire);
+        if(m.find()){
+           return new Entier("default", Integer.parseInt(m.group(1)));
+        }
+
+
+
+
+
+        return new Variable("entier", "entier");
     }
 
 

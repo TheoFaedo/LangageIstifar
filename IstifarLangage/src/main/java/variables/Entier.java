@@ -42,8 +42,15 @@ public class Entier extends Variable{
      * Méthode toString de la classe
      * @return chaine représentant l'objet
      */
-    public String toString() {
-        return "Variable " + this.nom + " de type " + this.type + " contenant la valeur " + this.valeur;
+    public String toString(){
+        try{
+            return this.getValeur() + "";
+        }catch (OperationInvalideException e){
+            return "Operation inconnue";
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return "Erreur";
     }
 
 }

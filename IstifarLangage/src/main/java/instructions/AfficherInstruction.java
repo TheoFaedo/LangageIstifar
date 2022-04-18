@@ -3,16 +3,17 @@ package instructions;
 import exceptions.OperationInvalideException;
 import noeuds.Noeud;
 import variables.Chaine;
+import variables.Variable;
 
 public class AfficherInstruction implements Noeud {
 
-    private Chaine c; //Chaine à afficher
+    private Variable c; //Chaine à afficher
 
     /**
      * Constructeur qui prend en paramètre la chaine à afficher lors de l'éxécution de l'instruction
      * @param c : chaine à afficher
      */
-    public AfficherInstruction(Chaine c){
+    public AfficherInstruction(Variable c){
         this.c = c;
     }
 
@@ -21,6 +22,6 @@ public class AfficherInstruction implements Noeud {
      */
     @Override
     public void executer() throws OperationInvalideException {
-        System.out.println(c.getValeur());
+        System.out.println(c);
     }
 }

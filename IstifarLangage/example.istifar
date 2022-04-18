@@ -1,5 +1,5 @@
 def main
-    afficher("haha")
+    afficher(1)
     si(True)
         afficher("okay")
     fin

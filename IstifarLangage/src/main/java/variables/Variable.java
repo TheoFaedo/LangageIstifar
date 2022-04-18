@@ -1,5 +1,7 @@
 package variables;
 
+import exceptions.OperationInvalideException;
+
 public class Variable {
         
         protected String nom; //Nom de la variable

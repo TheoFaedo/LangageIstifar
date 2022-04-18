@@ -56,6 +56,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
+    <configuration name="Lecteur" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="autres.Lecteur" />
+      <module name="IstifarLangage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="autres.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="autres.Main" />
       <module name="IstifarLangage" />
@@ -100,22 +113,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OperationBooleenneTest.getValeurOu" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IstifarLangage" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="variables.operations.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="variables.operations" />
-      <option name="MAIN_CLASS_NAME" value="variables.operations.OperationBooleenneTest" />
-      <option name="METHOD_NAME" value="getValeurOu(variables.Booleen,variables.Booleen,char)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="OperationBooleenneTest.testGetValeurMauvaisesOperations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IstifarLangage" />
       <extension name="coverage">
@@ -135,10 +132,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Lecteur" />
         <item itemvalue="JUnit.OperationBooleenneTest.testGetValeurMauvaisesOperations" />
         <item itemvalue="JUnit.OperationBooleenneTest" />
         <item itemvalue="JUnit.OperationBooleenneTest.getValeurNon" />
-        <item itemvalue="JUnit.OperationBooleenneTest.getValeurOu" />
       </list>
     </recent_temporary>
   </component>

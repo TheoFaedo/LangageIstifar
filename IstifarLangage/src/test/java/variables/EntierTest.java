@@ -43,6 +43,6 @@ class EntierTest {
     @ValueSource(ints = {1,2,5,10,100,1000,3333,5690,-800})
     void testToString(int val) {
         Entier e = new Entier("a", val);
-        Assertions.assertEquals("Variable " + "a" + " de type " + "entier" + " contenant la valeur " + val, e.toString());
+        Assertions.assertEquals(val + "", e.toString());
     }
 }

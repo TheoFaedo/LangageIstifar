@@ -43,6 +43,6 @@ class ChaineTest {
     @ValueSource(strings = {"haha", "hihi", "\'a\'", "\n\n", "hello world"})
     void testToString(String val) {
         Chaine e = new Chaine("a", val);
-        Assertions.assertEquals("Variable " + "a" + " de type " + "chaine" + " contenant la chaine \"" + val + "\"", e.toString());
+        Assertions.assertEquals(val + "", e.toString());
     }
 }

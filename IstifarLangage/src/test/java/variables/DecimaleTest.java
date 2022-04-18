@@ -43,6 +43,6 @@ class DecimaleTest {
     @ValueSource(doubles = {0.5,0.5e5,50.0,10.5,111.54,4.52E10,0.54,-1.1e10,-8.54})
     void testToString(double val) {
         Decimale e = new Decimale("a", val);
-        Assertions.assertEquals("Variable " + "a" + " de type " + "decimale" + " contenant la valeur " + val, e.toString());
+        Assertions.assertEquals(val + "", e.toString());
     }
 }

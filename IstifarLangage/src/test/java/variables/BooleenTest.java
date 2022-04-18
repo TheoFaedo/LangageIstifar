@@ -43,6 +43,6 @@ class BooleenTest {
     @ValueSource(booleans = {true,false})
     void testToString(boolean val) {
         Booleen e = new Booleen("a", val);
-        Assertions.assertEquals("Variable " + "a" + " de type " + "booleen" + " contenant la valeur " + val, e.toString());
+        Assertions.assertEquals(val + "", e.toString());
     }
 }

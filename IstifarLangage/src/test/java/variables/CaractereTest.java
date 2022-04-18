@@ -43,6 +43,6 @@ class CaractereTest {
     @ValueSource(chars = {'a','b','c','d','e','f','.',';','\n'})
     void testToString(char val) {
         Caractere e = new Caractere("a", val);
-        Assertions.assertEquals("Variable " + "a" + " de type " + "caractere" + " contenant le caractere \'" + val + "\'", e.toString());
+        Assertions.assertEquals(val + "", e.toString());
     }
 }

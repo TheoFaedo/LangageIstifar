@@ -2,6 +2,9 @@ package variables;
 
 import exceptions.OperationInvalideException;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Variable {
         
         protected String nom; //Nom de la variable

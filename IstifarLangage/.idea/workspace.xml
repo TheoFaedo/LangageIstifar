@@ -13,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -51,6 +51,7 @@
       <recent name="variables" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="variables.operations" />
       <recent name="exceptions" />
       <recent name="variables" />
     </key>
@@ -58,6 +59,19 @@
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="autres.Main" />
+      <module name="IstifarLangage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="autres.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="autres.Test" />
       <module name="IstifarLangage" />
       <extension name="coverage">
         <pattern>
@@ -114,28 +128,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DecimaleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IstifarLangage" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="variables.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="variables" />
-      <option name="MAIN_CLASS_NAME" value="variables.DecimaleTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="JUnit.BooleenTest" />
         <item itemvalue="JUnit.CaractereTest" />
         <item itemvalue="JUnit.ChaineTest" />
-        <item itemvalue="JUnit.DecimaleTest" />
       </list>
     </recent_temporary>
   </component>

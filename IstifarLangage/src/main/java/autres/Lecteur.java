@@ -5,6 +5,7 @@ import instructions.Condition;
 import noeuds.Bloc;
 import noeuds.Noeud;
 import variables.*;
+import variables.operations.OperationComparaison;
 import variables.operations.OperationEntier;
 
 import java.io.File;
@@ -22,16 +23,13 @@ import java.util.regex.Pattern;
 public class Lecteur {
 
     private String nomFichier;
-
-    public static void main(String[] args) {
-        Lecteur l = new Lecteur("example.istifar");
-        System.out.println(l.lireValeur("22+23"));
-    }
+    private Interpreteur interpreteur;
 
 
 
-    public Lecteur(String nomFichier){
+    public Lecteur(String nomFichier, Interpreteur interpreteur){
         this.nomFichier = nomFichier;
+        this.interpreteur = interpreteur;
     }
 
     public void lireFichier(Noeud noeudPrincipale){
@@ -50,8 +48,9 @@ public class Lecteur {
                 Variable vTemp = null;
 
                 Matcher m;
-
+                System.out.println(trouverInstruction(ligne));
                 switch (trouverInstruction(ligne)){
+
                     case "si":
                         m = Pattern.compile("\\((.*)\\)").matcher(ligne); //On récupère le contenu de la paranthese
                         if(m.find()) {
@@ -64,6 +63,7 @@ public class Lecteur {
                                 pileNoeud.add(temp1); //On ajoute ce bloc à la liste des bloc courant
                                 pileNoeud.add(temp2); //On ajoute ce bloc à la liste des bloc courant
                             }
+
                         }
                         break;
 
@@ -106,6 +106,11 @@ public class Lecteur {
 
     }
 
+    /**
+     * Méthode qui permet de trouver l'instruction que demande une ligne
+     * @param ligne : ligne qu'on souhaite analyser
+     * @return l'identifiant de l'instruction demandée
+     */
     public String trouverInstruction(String ligne){
          String[] tab = ligne.replace('\t', ' ').split(" ");
 
@@ -140,11 +145,62 @@ public class Lecteur {
             return "finsi";
         }
 
+        pattern = Pattern.compile("[ \t]*.+[ \t]=[ \t].+[ \t]*");
+        m = pattern.matcher(ligne);
+        if(m.find()){
+            return "assign";
+        }
+
         return "o";
     }
 
+    /**
+     * Permet de lire une valeur contenue dans une expression
+     * @param chaineALire : chaine dont on souhaite connaitre la valeur
+     * @return la Valeur donnée
+     */
     public Variable lireValeur(String chaineALire){
         Matcher m;
+
+        //Syntaxe PlusGrandQue
+        m = Pattern.compile("(.*)\\>(.*)").matcher(chaineALire);
+        if(m.find()){
+
+            Entier e1 = null;
+            Entier e2 = null;
+
+            Variable vTemp = lireValeur(m.group(1));
+            if(vTemp.getType().equals("entier")){
+                e1 = (Entier)vTemp;
+            }
+
+            vTemp = lireValeur(m.group(2));
+            if(vTemp.getType().equals("entier")){
+                e2 = (Entier)vTemp;
+            }
+
+            return new OperationComparaison("default", e1, e2, '>');
+        }
+        //Syntaxe PlusPetitQue
+        m = Pattern.compile("(.*)\\<(.*)").matcher(chaineALire);
+        if(m.find()){
+
+            Entier e1 = null;
+            Entier e2 = null;
+
+            Variable vTemp = lireValeur(m.group(1));
+            if(vTemp.getType().equals("entier")){
+                e1 = (Entier)vTemp;
+            }
+
+            vTemp = lireValeur(m.group(2));
+            if(vTemp.getType().equals("entier")){
+                e2 = (Entier)vTemp;
+            }
+
+            return new OperationComparaison("default", e1, e2, '<');
+        }
+
 
 
         //Syntaxe Addition
@@ -165,6 +221,26 @@ public class Lecteur {
             }
 
             return new OperationEntier("default", e1, e2, '+');
+        }
+
+        //Syntaxe Soustraction
+        m = Pattern.compile("(.*)\\-(.*)").matcher(chaineALire);
+        if(m.find()){
+
+            Entier e1 = null;
+            Entier e2 = null;
+
+            Variable vTemp = lireValeur(m.group(1));
+            if(vTemp.getType().equals("entier")){
+                e1 = (Entier)vTemp;
+            }
+
+            vTemp = lireValeur(m.group(2));
+            if(vTemp.getType().equals("entier")){
+                e2 = (Entier)vTemp;
+            }
+
+            return new OperationEntier("default", e1, e2, '-');
         }
 
         //Syntaxe chaine de caractere
